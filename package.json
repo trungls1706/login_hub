@@ -1,0 +1,30 @@
+{
+  "name": "login_hub",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "rollup": "rm -rf dist && rollup -c"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trungls1706/login_hub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trungls1706/login_hub/issues"
+  },
+  "homepage": "https://github.com/trungls1706/login_hub#readme",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "esbuild": "^0.17.0",
+    "rollup": "^3.10.0",
+    "rollup-plugin-dts": "^5.1.1",
+    "rollup-plugin-esbuild": "^5.0.0"
+  }
+}
