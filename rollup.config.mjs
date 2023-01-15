@@ -1,6 +1,8 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import { babel } from '@rollup/plugin-babel';
+//optimize
+import terser from "@rollup/plugin-terser";
+import gzipPlugin from "rollup-plugin-gzip";
 
 const config = [
   {
@@ -19,7 +21,17 @@ const config = [
         sourcemap: true,
       },
     ],
-    plugins: [resolve(), commonjs(),babel({ babelHelpers: 'bundled' })],
+    plugins: [
+      //optimize
+      resolve(),
+      commonjs(),
+      terser(),
+      gzipPlugin(),
+    ],
+  },
+  {
+    input: "dist/cjs/index.js",
+    output: [{ file: "dist/index.js", format: "cjs" }],
   },
 ];
 

@@ -1,3 +1,4 @@
-import multipassify from "./multipassify/multipassify";
+import { multipassify } from "./multipassify/multipassify";
 
-export default multipassify
+export default multipassify;
+
